@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MIZZURIの自己紹介</title>
+    <style>
+        /* Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        /* header */
+        h1 {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h2 {
+            text-align: center;
+        }
+
+        /* nav */
+        nav {
+            background-color: black;
+            position: sticky;
+            top: 0;
+           
+            z-index: 1000;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 20px;
+        }
+
+        .active {
+            background-color: #555
+        }
+
+        .contact {
+            float: right;
+        }
+
+        nav ul li:hover {
+            background-color: white;
+        }
+
+        /* home */
+        .homeImage img {
+            width: 100%;
+        }
+
+        .homeImage img h1 {
+            text-align: center;
+        }
+
+        .imageDiv {
+            width: 60%;
+
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .imageDiv img {
+            width: 100%;
+
+            height: auto;
+            display: block;
+            padding: 70px;
+
+        }
+
+        .textDiv {
+            font-family: 'Roboto', sans-serif;
+
+            font-size: 22px;
+
+            padding: 40px 60px;
+
+            text-align: center;
+            background-color: #f7f7f7;
+
+            color: #333;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            line-height: 1.6;
+
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        .edu-logo {
+            width: 100px;
+            vertical-align: middle;
+        }
+
+        .school-logo {
+            width: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+
+        }
+
+        .paraDiv {
+            width: 60%;
+            float: left;
+            padding: 100px;
+            font-size: large;
+
+
+        }
+
+        .photoDiv {
+            width: 40%;
+            float: left;
+        }
+
+        .photoDiv img {
+            width: 100%;
+            padding: 50px;
+            float: left;
+
+        }
+
+        .paraDiv2 {
+            width: 60%;
+            float: right;
+            padding: 100px;
+            font-size: large;
+
+
+        }
+
+        .photoDiv2 {
+            width: 40%;
+            float: right;
+        }
+
+        .photoDiv2 img {
+            width: 100%;
+            padding: 50px;
+            float: right;
+
+        }
+
+        .paraDiv3 {
+            width: 60%;
+            float: left;
+            padding: 100px;
+            font-size: large;
+
+
+        }
+
+        .photoDiv3 {
+            width: 40%;
+            float: left;
+        }
+
+        .photoDiv3 img {
+            width: 100%;
+            padding: 50px;
+            float: left;
+
+        }
+
+        .finalImg {
+            width: 100%;
+        }
+
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+
+        .title {
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .text {
+            font-size: 21px;
+            word-spacing: 8px;
+            text-align: justify;
+            line-height: 25px;
+
+        }
+
+        section {
+
+            clear: both;
+            display: table;
+        }
+
+        dl {
+            font-size: 20px;
+        }
+
+        .finalimage img {
+            width: 100%;
+        }
+
+        .finalimage h2 {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .csphoto img {
+            width: 100%;
+        }
+
+
+        /* footer */
+        footer {
+            width: 50%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .footerText {
+            line-height: 30px;
+
+        }
+
+
+
+        .footerIcons {
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 40px;
+
+        }
+
+        .footerIcons i {
+            font-size: 22px;
+            margin: 0px 20px;
+
+
+        }
+
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Hello, I'm MIZZURI</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li class="active"><a href="#home">ホーム</a></li>
+            <li><a href="#aboutme">私について</a></li>
+
+            <li><a href="#skills">スキル</a></li>
+            <li><a href="#projects">プロジェクト</a></li>
+            <li class="contact"><a href="#contact">連絡先</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="homeImage">
+            <img src="./photo copy 2/profile.PNG" alt="MIZZURIのプロフィール写真">
+            <h1>私はウェブ開発に情熱を持っている、UI/UX デザイナーを目指す者です。</h1>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="aboutme">
+        <div class="imageDiv">
+            <img src="./photo copy 2/polaroid.jpg" alt="自己紹介セクションの画像">
+        </div>
+        <div class="textDiv">
+            <h2>私について</h2>
+            <br>
+
+
+            <p>こんにちは。私は2002年6月27日生まれの22歳で、現在、中央情報専門学校のIT学科に通う1年生です。
+                2026年に卒業予定で、ウェブ開発に強い情熱を持ち、UI/UXデザインへの関心も高まっています。私の技術への興味は、
+                アイデアを現実に変えることができる技術の力に魅了されたことから始まり、その好奇心が私を情報技術の世界に没頭させました。
+
+                私が最もワクワクするのは、単に機能的であるだけでなく、直感的で楽しめるデジタル体験を作り出すという挑戦です。
+                特に、UI/UXデザインに心惹かれており、創造性と論理を組み合わせて、ユーザーに響くインターフェースを作り出すことに魅力を感じています。
+                技術は誰にとっても使いやすく、魅力的であるべきだと考えており、デジタル世界との関わり方を向上させる製品をデザインする方法を学ぶことに専念しています。
+                今後も学びを続けながら、UI/UXデザインの原則を探求し、意味のあるシームレスなユーザー体験を創造していきたいと思っています。
+            </p>
+        </div>
+        <div class="textDiv">
+            <img src="./photo copy 2/nobc.PNG" alt="Edu Logo" class="edu-logo">
+            <h2>学歴</h2>
+            <ul>
+                <li><img src="./photo copy 2/ccmc.PNG" alt="School Logo" class="school-logo">
+                    <strong><a href="https://www.ccmc.ac.jp/" target="_blank">中央情報専門学校 (Chuo Computer and Communication
+                            College)</a> </strong> - IT.WEB学科 - 2024年入学 - 2026年卒業予定
+
+                </li>
+                <li><img src="./photo copy 2/ccmc.PNG" alt="School Logo" class="school-logo">
+                    <strong><a href="https://www.ccmc.ac.jp/" target="_blank">中央情報専門学校 (Chuo Computer and Communication
+                            College)</a></strong> - 日本語学科 - 2022年入学 - 2024年卒業
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="photoDiv">
+            <img src="./photo copy 2/skill1.png.PNG" alt="skills">
+        </div>
+        <div class="paraDiv">
+            <dl>
+                <dt>
+                    <h2>スキル</h2>
+                </dt>
+                <br>
+                <dd>- フロントエンド開発とUI/UXデザインに情熱を持ち、HTML、CSS、PHP、JavaScriptの基礎をしっかりと持っています。</dd><br>
+                <dd>- Python、データベース、コーディング、プログラミング、そしてコンピュータサイエンスに精通しています。</dd><br>
+                <dd>- 視覚的に魅力的なコンテンツを作成するためのMicrosoft Officeスイート(Word, Excel, PowerPoint)およびCanvaに精通しています。</dd><br>
+                <dd>- IBUTテストでゴールド認定を取得しました</dd>
+            </dl>
+        </div>
+        <div class="photoDiv2">
+            <img src="./photo copy 2/language.png.PNG" alt="skills">
+        </div>
+        <div class="paraDiv2">
+            <dl>
+                <dt>
+                    <h2>言語</h2>
+                </dt>
+                <br>
+                <dd>
+                    <h3> 母国語：ミャンマー語</h3>
+                </dd>
+                <dd>- ミャンマー語は私の母国語であり、文化的な背景と深く結びついています。ミャンマーで育ったため、日常的なコミュニケーションを流暢に行うことができます。
+                </dd><br>
+                <dd>
+                    <h3>英語：堪能 </h3>
+                </dd>
+                <dd>- 私は英語に堪能で、学業やビジネスでの使用においても自信があります。読み書き、会話ともに高いスキルを持っています。
+                </dd><br>
+                <dd>
+                    <h3>日本語：流暢 </h3>
+                </dd>
+                <dd>- 日本語能力試験N2認定を取得しており、日本での生活や学業において、スムーズにコミュニケーションを取ることができます。
+
+                </dd>
+
+
+
+            </dl>
+        </div>
+        <div class="photoDiv3">
+            <img src="./photo copy 2/future.PNG" alt="skills">
+        </div>
+        <div class="paraDiv3">
+            <dl>
+                <dt>
+                    <h2>将来の目標</h2>
+                </dt>
+                <br>
+                <dd>- UI/UXデザイナーになることを目指し、今年TOEICテストを受験して英語スキルをさらに向上させる予定です</dd>
+            </dl>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="textDiv">
+            <h2>プロジェクト</h2>
+            <p>COMING SOON......</p>
+
+        </div>
+        <div class="csphoto">
+            <img src="./photo copy 2/comingsoon.PNG" alt="comingsoon">
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="textDiv">
+            <h2>連絡先はこちらから：</h2>
+
+        </div>
+        <div class="finalimage">
+            <img src="./photo copy 2/last.PNG" alt="finale photo">
+
+            <h2>Connet with me on Social Midea </h2>
+        </div>
+        <div class="footerIcons">
+            <a href="https://www.facebook.com/missrainy.may"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/uriyahope/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@uriyahope?_t=8p6ojJL2lDG&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/uriyahope-35b089321/"><i class="fa-brands fa-linkedin"></i></a>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 MIZZURI. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
